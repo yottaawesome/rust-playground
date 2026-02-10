@@ -16,3 +16,5 @@ Cargo is the central tool when working with Rust. It starts, builds, runs and ma
 * `cargo build`: builds the current project.
 * `cargo run`: builds and runs the current build.
 * `cargo add`: [docs](https://doc.rust-lang.org/cargo/commands/cargo-add.html) adds a dependency by updating the toml config.
+
+When adding dependencies, you may need to modify the toml file directly to add or remove features of dependencies.
