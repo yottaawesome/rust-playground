@@ -1,6 +1,9 @@
 use axum::{routing::get, Router};
 use std::net::SocketAddr;
 
+// https://rust-on-nails.com/docs/full-stack-web/web-server/
+// https://tokio.rs/tokio/tutorial/hello-tokio
+
 async fn hello_world() -> &'static str
 {
     return "Hello, world!"
