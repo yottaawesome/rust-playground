@@ -3,6 +3,8 @@ mod stuff;
 // use brings the function into scope so we can call it without stuff:: prefix
 use stuff::superblah;
 
+// zed  keymap file location on windows: ~/.config/zed/keymap.json
+
 fn something(x: i32) -> i32 {
     println!("The value of x is: {x}");
     return x;
