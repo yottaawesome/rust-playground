@@ -1,33 +1,32 @@
+// mod tells the compiler to include stuff.rs as a module
+mod stuff;
+// use brings the function into scope so we can call it without stuff:: prefix
+use stuff::superblah;
 
-fn something(x:i32) -> i32
-{
+fn something(x: i32) -> i32 {
     println!("The value of x is: {x}");
     return x;
 }
 
-fn tuples()
-{
+fn tuples() {
     let tup: (i32, f64, u8) = (500, 6.4, 1);
     let (x, y, z) = tup;
     let xx = tup.1; // sets xx to tup[1]
 }
 
-fn variables()
-{
+fn variables() {
     let x = 5; // immutable by default
     let mut y = 5; // mutable
     y = 15;
-    const Something:i32 = 10;
+    const Something: i32 = 10;
 }
 
-fn arrays()
-{
+fn arrays() {
     let arr1: [i32; 5] = [1, 2, 3, 4, 5];
     let arr2 = [3; 5]; // 5 elements of value 3
 }
 
-fn control()
-{
+fn control() {
     let number = 6;
 
     if number % 4 == 0 {
@@ -40,13 +39,11 @@ fn control()
         println!("number is not divisible by 4, 3, or 2");
     }
 
-
     let condition = true;
     let number = if condition { 5 } else { 6 };
 }
 
-fn looploop()
-{
+fn looploop() {
     let mut counter = 0;
 
     let result = loop {
@@ -60,15 +57,14 @@ fn looploop()
     // labelled loop
     'outer: loop {
         loop {
-            break 'outer
-        };
-    };
+            break 'outer;
+        }
+    }
 
     println!("The result is {result}");
 }
 
-fn whileloop()
-{
+fn whileloop() {
     let mut number = 3;
 
     while number != 0 {
@@ -80,8 +76,7 @@ fn whileloop()
     println!("LIFTOFF!!!");
 }
 
-fn forloops()
-{
+fn forloops() {
     let a = [10, 20, 30, 40, 50];
 
     for element in a {
@@ -95,22 +90,13 @@ fn forloops()
 }
 
 // moves
-fn references1(str: String)
-{
-
-}
+fn references1(str: String) {}
 
 // references
-fn references2(some: &String)
-{
-
-}
+fn references2(some: &String) {}
 
 // references, only one reference can be active at a time
-fn references3(some: &mut String)
-{
-
-}
+fn references3(some: &mut String) {}
 
 fn main() {
     let literal: &str = "hello";
@@ -118,7 +104,7 @@ fn main() {
     let aa = &xx;
     let bb = &xx;
 
+    superblah();
 
     something(1);
-
 }

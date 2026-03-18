@@ -1,0 +1,8 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-=": ["task::Spawn", { "task_name": "run file" }],
+    },
+  },
+]
