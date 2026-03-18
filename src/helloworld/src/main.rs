@@ -4,6 +4,32 @@ mod stuff;
 use stuff::superblah;
 
 // zed  keymap file location on windows: ~/.config/zed/keymap.json
+// A typical Rust executable (binary) project:
+/*
+   my_project/
+   ├── Cargo.toml          # Project metadata & dependencies
+   ├── Cargo.lock          # Locked dependency versions
+   ├── src/
+   │   ├── main.rs         # Entry point (fn main)
+   │   ├── lib.rs          # Optional shared library root
+   │   ├── module1.rs      # Top-level module
+   │   └── module2/        # Module with submodules
+   │       ├── mod.rs      # Module root (or use module2.rs above src/)
+   │       └── sub.rs      # Submodule
+   ├── tests/              # Integration tests
+   │   └── integration.rs
+   ├── benches/            # Benchmarks
+   ├── examples/           # Example binaries
+   │   └── demo.rs
+   └── target/             # Build output (gitignored)
+
+  Key points:
+   - main.rs is the binary entry point
+   - Modules are added via mod name; in the parent module
+   - A module foo maps to either foo.rs or foo/mod.rs
+   - lib.rs is optional — use it to share code between binaries or expose a library
+   - Multiple binaries can live in src/bin/, each file becoming its own executable
+*/
 
 fn something(x: i32) -> i32 {
     println!("The value of x is: {x}");
