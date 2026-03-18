@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "multi-bin: debug default",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/multi-bin/target/debug/multi-bin.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/multi-bin",
+            "preLaunchTask": "multi-bin: build all",
+            "stopAtEntry": false
+        },
+        {
+            "name": "multi-bin: debug greeter",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/multi-bin/target/debug/greeter.exe",
+            "args": ["Rustacean"],
+            "cwd": "${workspaceFolder}/src/multi-bin",
+            "preLaunchTask": "multi-bin: build all",
+            "stopAtEntry": false
+        },
+        {
+            "name": "multi-bin: debug counter",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/multi-bin/target/debug/counter.exe",
+            "args": ["15"],
+            "cwd": "${workspaceFolder}/src/multi-bin",
+            "preLaunchTask": "multi-bin: build all",
+            "stopAtEntry": false
+        },
+        {
+            "name": "workspace-demo: debug server",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/workspace-demo/target/debug/app-server.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/workspace-demo",
+            "preLaunchTask": "workspace-demo: build all",
+            "stopAtEntry": false
+        },
+        {
+            "name": "workspace-demo: debug cli",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/workspace-demo/target/debug/app-cli.exe",
+            "args": ["admin"],
+            "cwd": "${workspaceFolder}/src/workspace-demo",
+            "preLaunchTask": "workspace-demo: build all",
+            "stopAtEntry": false
+        }
+    ]
+}

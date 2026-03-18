@@ -1,0 +1,47 @@
+[
+    {
+        "label": "multi-bin: build all",
+        "command": "cargo build --manifest-path src/multi-bin/Cargo.toml",
+        "tags": ["rust-build"]
+    },
+    {
+        "label": "multi-bin: run default",
+        "command": "cargo run --manifest-path src/multi-bin/Cargo.toml",
+        "tags": ["rust-run"]
+    },
+    {
+        "label": "multi-bin: run greeter",
+        "command": "cargo run --manifest-path src/multi-bin/Cargo.toml --bin greeter",
+        "tags": ["rust-run"]
+    },
+    {
+        "label": "multi-bin: run counter",
+        "command": "cargo run --manifest-path src/multi-bin/Cargo.toml --bin counter",
+        "tags": ["rust-run"]
+    },
+    {
+        "label": "multi-bin: test",
+        "command": "cargo test --manifest-path src/multi-bin/Cargo.toml",
+        "tags": ["rust-test"]
+    },
+    {
+        "label": "workspace-demo: build all",
+        "command": "cargo build --manifest-path src/workspace-demo/Cargo.toml",
+        "tags": ["rust-build"]
+    },
+    {
+        "label": "workspace-demo: run server",
+        "command": "cargo run --manifest-path src/workspace-demo/Cargo.toml -p app-server",
+        "tags": ["rust-run"]
+    },
+    {
+        "label": "workspace-demo: run cli",
+        "command": "cargo run --manifest-path src/workspace-demo/Cargo.toml -p app-cli",
+        "tags": ["rust-run"]
+    },
+    {
+        "label": "workspace-demo: test all",
+        "command": "cargo test --manifest-path src/workspace-demo/Cargo.toml",
+        "tags": ["rust-test"]
+    }
+]

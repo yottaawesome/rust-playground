@@ -1,0 +1,72 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "multi-bin: build all",
+            "type": "cargo",
+            "command": "build",
+            "args": ["--manifest-path", "src/multi-bin/Cargo.toml"],
+            "group": "build",
+            "problemMatcher": ["$rustc"]
+        },
+        {
+            "label": "multi-bin: run default",
+            "type": "cargo",
+            "command": "run",
+            "args": ["--manifest-path", "src/multi-bin/Cargo.toml"],
+            "problemMatcher": ["$rustc"]
+        },
+        {
+            "label": "multi-bin: run greeter",
+            "type": "cargo",
+            "command": "run",
+            "args": ["--manifest-path", "src/multi-bin/Cargo.toml", "--bin", "greeter"],
+            "problemMatcher": ["$rustc"]
+        },
+        {
+            "label": "multi-bin: run counter",
+            "type": "cargo",
+            "command": "run",
+            "args": ["--manifest-path", "src/multi-bin/Cargo.toml", "--bin", "counter"],
+            "problemMatcher": ["$rustc"]
+        },
+        {
+            "label": "multi-bin: test",
+            "type": "cargo",
+            "command": "test",
+            "args": ["--manifest-path", "src/multi-bin/Cargo.toml"],
+            "group": "test",
+            "problemMatcher": ["$rustc"]
+        },
+        {
+            "label": "workspace-demo: build all",
+            "type": "cargo",
+            "command": "build",
+            "args": ["--manifest-path", "src/workspace-demo/Cargo.toml"],
+            "group": "build",
+            "problemMatcher": ["$rustc"]
+        },
+        {
+            "label": "workspace-demo: run server",
+            "type": "cargo",
+            "command": "run",
+            "args": ["--manifest-path", "src/workspace-demo/Cargo.toml", "-p", "app-server"],
+            "problemMatcher": ["$rustc"]
+        },
+        {
+            "label": "workspace-demo: run cli",
+            "type": "cargo",
+            "command": "run",
+            "args": ["--manifest-path", "src/workspace-demo/Cargo.toml", "-p", "app-cli"],
+            "problemMatcher": ["$rustc"]
+        },
+        {
+            "label": "workspace-demo: test all",
+            "type": "cargo",
+            "command": "test",
+            "args": ["--manifest-path", "src/workspace-demo/Cargo.toml"],
+            "group": "test",
+            "problemMatcher": ["$rustc"]
+        }
+    ]
+}
